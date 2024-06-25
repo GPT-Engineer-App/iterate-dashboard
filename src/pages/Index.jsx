@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Container, Flex, Heading, Text, VStack, HStack, Stat, StatLabel, StatNumber, StatHelpText, SimpleGrid, Icon, IconButton } from "@chakra-ui/react";
-import { FaBars } from "react-icons/fa";
+import { Box, Container, Flex, Heading, Text, VStack, HStack, Stat, StatLabel, StatNumber, StatHelpText, SimpleGrid, Icon } from "@chakra-ui/react";
 import { FaUsers, FaChartBar, FaCalendarAlt, FaBell } from "react-icons/fa";
 
 const DashboardCard = ({ title, value, icon, subtext }) => (
@@ -33,23 +32,13 @@ const DashboardCard = ({ title, value, icon, subtext }) => (
   </Stat>
 );
 
-const Index = ({ toggleSidebar }) => {
+const Index = () => {
   return (
     <Box bg="gray.100" minH="100vh">
       <Container maxW="container.xl" py={5}>
         <VStack spacing={8} align="stretch">
           <Flex justifyContent="space-between" alignItems="center">
-            <Flex alignItems="center">
-              <IconButton
-                display={{ base: "flex", md: "none" }}
-                onClick={toggleSidebar}
-                icon={<FaBars />}
-                size="sm"
-                aria-label="Open menu"
-                mr={2}
-              />
-              <Heading size="lg">Dashboard</Heading>
-            </Flex>
+            <Heading size="lg">Dashboard</Heading>
             <HStack>
               <Icon as={FaBell} w={6} h={6} />
               <Text>John Doe</Text>
